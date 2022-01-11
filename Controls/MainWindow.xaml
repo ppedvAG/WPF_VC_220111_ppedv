@@ -25,6 +25,13 @@
         <TextBlock x:Name="Tbl_Strings"
                    Text="Ich bin auch ein String"
                    FontFamily="Comic Sans MS"/>
+        
+        <!--Beispiele für Zeilenumbrüche-->
+        <TextBlock x:Name="Tbl_Zeilenumbruch">
+            Hallo<LineBreak/>Ciao
+        </TextBlock>
+        <TextBlock x:Name="Tbl_Zeilenumbruch_2"
+                   Text="Hallo&#x2028;Ciao"/>
 
         <!--Buttons können von den Usern angeklickt werden, wodurch das Click-Event ausgelöst wird (vgl. CB)-->
         <Button x:Name="Btn_KlickMich"
