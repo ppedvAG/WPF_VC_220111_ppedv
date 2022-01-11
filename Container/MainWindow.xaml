@@ -7,7 +7,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Container"
         mc:Ignorable="d"
-        Title="MainWindow" Height="418" Width="306">
+        Title="MainWindow" Height="598" Width="306">
 
     <!--Der ScrollViewer zweigt automatisch eine ScrollBar an, wenn der Content des ScrollViewers im Fenster nicht mehr vollständig
         sichtbar ist-->
@@ -124,6 +124,7 @@
             <Viewbox Stretch="Fill">
                 <Button Content="Button"/>
             </Viewbox>
+
 
         </StackPanel>
     </ScrollViewer>

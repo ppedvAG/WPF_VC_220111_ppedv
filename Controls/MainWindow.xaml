@@ -25,7 +25,7 @@
         <TextBlock x:Name="Tbl_Strings"
                    Text="Ich bin auch ein String"
                    FontFamily="Comic Sans MS"/>
-        
+
         <!--Beispiele für Zeilenumbrüche-->
         <TextBlock x:Name="Tbl_Zeilenumbruch">
             Hallo<LineBreak/>Ciao
@@ -133,6 +133,6 @@
                 </RibbonGroup>
             </RibbonTab>
         </Ribbon>
-
+        
     </StackPanel>
 </Window>
