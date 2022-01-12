@@ -3,23 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M1_HalloWPF", "HalloWPF\M1_HalloWPF.csproj", "{19C9BADF-8485-479D-8168-48D736202854}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M01_HalloWPF", "HalloWPF\M01_HalloWPF.csproj", "{19C9BADF-8485-479D-8168-48D736202854}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M2_Controls", "Controls\M2_Controls.csproj", "{D63297F7-9DEE-4D24-97AB-60A218BA30C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M02_Controls", "Controls\M02_Controls.csproj", "{D63297F7-9DEE-4D24-97AB-60A218BA30C9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Personendatenbank", "Personendatenbank\Personendatenbank.csproj", "{4CEACCFA-4227-4E6E-B8AE-BE577AD45C68}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M3_Container", "Container\M3_Container.csproj", "{F73E0413-5945-4B07-90F9-1A7E2751C04A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M03_Container", "Container\M03_Container.csproj", "{F73E0413-5945-4B07-90F9-1A7E2751C04A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M4_EventHandling", "EventHandling\M4_EventHandling.csproj", "{E4805FD1-8B1B-4270-BA7F-4E31CA160E1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M04_EventHandling", "EventHandling\M04_EventHandling.csproj", "{E4805FD1-8B1B-4270-BA7F-4E31CA160E1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M5_PropertyBinding", "PropertyBinding\M5_PropertyBinding.csproj", "{A31C232C-7CF5-40E9-9829-F089802D4C60}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M05_PropertyBinding", "PropertyBinding\M05_PropertyBinding.csproj", "{A31C232C-7CF5-40E9-9829-F089802D4C60}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorPicker", "ColorPicker\ColorPicker.csproj", "{575D0D69-C07D-49B1-9AB3-3C1F2F693C06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M6_DataBinding", "DataBinding\M6_DataBinding.csproj", "{BB4A494C-202B-4279-AFA6-BD7F94FED0B4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M06_DataBinding", "DataBinding\M06_DataBinding.csproj", "{BB4A494C-202B-4279-AFA6-BD7F94FED0B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ressourcen_Styles", "Ressourcen_Styles\Ressourcen_Styles.csproj", "{01F1BBA0-BBBE-4029-B912-03C1323C7467}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M07_Ressourcen_Styles", "Ressourcen_Styles\M07_Ressourcen_Styles.csproj", "{01F1BBA0-BBBE-4029-B912-03C1323C7467}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M08_Templates", "Templates\M08_Templates.csproj", "{E842679D-1EAC-4E8E-AFF4-DDEA481D60FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{01F1BBA0-BBBE-4029-B912-03C1323C7467}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01F1BBA0-BBBE-4029-B912-03C1323C7467}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01F1BBA0-BBBE-4029-B912-03C1323C7467}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E842679D-1EAC-4E8E-AFF4-DDEA481D60FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E842679D-1EAC-4E8E-AFF4-DDEA481D60FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E842679D-1EAC-4E8E-AFF4-DDEA481D60FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E842679D-1EAC-4E8E-AFF4-DDEA481D60FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
