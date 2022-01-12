@@ -5,12 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DataBinding"
         mc:Ignorable="d"
-        Title="MainWindow" Height="509" Width="319">
+        Title="MainWindow" Height="476" Width="405">
     <StackPanel>
-        
-        <StackPanel x:Name="Spl_DataContext">
+
+        <StackPanel x:Name="Spl_DataContextBsp">
+            <!--Der DataContext repräsentiert das Datenobjekt, auf welches sich der
+            entsprechende Bereich fokussiert (hier das StackPanel). Innerhalb dieses
+            Bereichs kann per Kurzbindung auf dieses Objekt zugrgriffen werden-->
             <StackPanel.DataContext>
-                <local:Person Vorname="Anna" Nachname="Nass" Alter="38"/>
+                <local:Person Vorname="Anna" Nachname="Meier" Alter="29"/>
             </StackPanel.DataContext>
 
             <TextBox Text="{Binding Vorname}"/>
@@ -20,8 +23,11 @@
 
             <Button x:Name="Btn_Show" Content="Show" Click="Btn_Show_Click"/>
             <Button x:Name="Btn_Altern" Content="Altern" Click="Btn_Altern_Click"/>
+
         </StackPanel>
 
+        <!--ItemControls können an Listen angebunden werden, durch welche sie mit Objekten
+        befüllt werden-->
         <ListBox x:Name="Lbx_Personen" Height="100"
                  ItemsSource="{Binding Personenliste}"/>
         <Button x:Name="Btn_Neu" Content="Neu" Click="Btn_Neu_Click"/>
