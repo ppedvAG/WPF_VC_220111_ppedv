@@ -5,12 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Validation"
         mc:Ignorable="d"
-        Title="MainWindow" Height="296" Width="342">
+        Title="MainWindow" Height="383" Width="379">
 
     <Window.Resources>
+        <local:ValidationRuleCollection x:Key="validationRules">
+            <local:IPv4Validation/>
+        </local:ValidationRuleCollection>
+
+        <!--ErrorTemplates sind ControlTemplates, welche das Element im Falle einer verletzten ValidationRule anzeigt-->
         <ControlTemplate x:Key="Ctp_Error_01">
             <StackPanel>
                 <Border BorderBrush="Red" BorderThickness="2">
+                    <!--AdornedElementPlaceholder sind Platzhalterelemente für das ürsprüngliche Element in
+                        ErrorTemplates-->
                     <AdornedElementPlaceholder x:Name="Aep"/>
                 </Border>
                 <TextBlock Foreground="Red"
@@ -27,17 +34,11 @@
                        Placement="Bottom"
                        IsOpen="{Binding ElementName=Aep, Path=AdornedElement.IsMouseOver, Mode=OneWay}"
                        PopupAnimation="Fade">
-                    <TextBlock Background="White" Foreground="Red" Margin="2"
+                    <TextBlock Foreground="White" Background="Red" Margin="5"
                                Text="{Binding ElementName=Aep, Path=AdornedElement.(Validation.Errors)[0].ErrorContent}"/>
                 </Popup>
             </StackPanel>
         </ControlTemplate>
-
-        <local:ValidationRuleCollection x:Key="validationRules">
-            <local:IPv4Validation /> 
-            <!--weitere Regelen-->
-        </local:ValidationRuleCollection>
-        
     </Window.Resources>
 
     <Window.DataContext>
@@ -51,6 +52,9 @@
             <TextBox.Text>
                 <Binding ElementName="Tbl_IpOutput" Path="Text" UpdateSourceTrigger="PropertyChanged">
                     <Binding.ValidationRules>
+                        <!--ValidationRules definieren, wann eine Eingabe durch den Benutzer eine zulässige Eingabe ist und
+                        geben das Ergebnis dieser Prüfung an die GUI zurück. Im False-Fall wird gegebenenfalls ein ErrorTemplate
+                        angezeigt. ValidationsRules werden als C#-Klasse abgelegt.-->
                         <local:IPv4Validation/>
                     </Binding.ValidationRules>
                 </Binding>
@@ -58,17 +62,18 @@
         </TextBox>
         <TextBlock x:Name="Tbl_IpOutput"/>
 
-        <TextBox x:Name="Tbx_IpInput_02"
-                 Validation.ErrorTemplate="{StaticResource Ctp_Error_02}"
-                 Text="{local:ValidationMarkup {Binding ElementName=Tbl_IpOutput_02, Path=Text, UpdateSourceTrigger=PropertyChanged}, {StaticResource validationRules}}"/>
-        <TextBlock x:Name="Tbl_IpOutput_02"/>
-
-
+        <!--Mit der Property ValidatesOnExceptions können vom CodeBehind geworfene Exceptions als ValidierungsFall von der GUI aufgefangen werden-->
         <TextBox Text="{Binding Name, ValidatesOnExceptions=True, UpdateSourceTrigger=PropertyChanged}"
                  Validation.ErrorTemplate="{StaticResource Ctp_Error_01}"/>
 
+        <!--Mit der Property ValidatesOnDataErrors können durch bestimmte Interfaces direkt in der Datenklasse ValidierungsFälle definiert werden-->
         <TextBox Text="{Binding Alter, ValidatesOnDataErrors=True, UpdateSourceTrigger=PropertyChanged}"
                  Validation.ErrorTemplate="{StaticResource Ctp_Error_01}"/>
-    </StackPanel>
 
+        <!--Anwendung der ValidationMarkup (vgl. IPv4Validation.cs)-->
+        <TextBox x:Name="Tbx_IpInput_2"
+                 Validation.ErrorTemplate="{StaticResource Ctp_Error_02}"
+                 Text="{local:ValidationMarkup {Binding ElementName=Tbl_IpOutput_2, Path=Text, UpdateSourceTrigger=PropertyChanged}, {StaticResource validationRules}}"/>
+        <TextBlock x:Name="Tbl_IpOutput_2"/>
+    </StackPanel>
 </Window>
