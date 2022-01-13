@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Trigger"
-        xmlns:usercontrols="clr-namespace:UserControls;assembly=UserControls"
+        xmlns:usercontrols="clr-namespace:UserControls;assembly=M11_UserControls"
         mc:Ignorable="d"
         Title="MainWindow" Height="363" Width="267">
     <!--Mittels Triggern kann das Verhalten/Aussehen von Objekten unter bestimmten Umständen geändert werden-->
@@ -61,6 +61,7 @@
 
         <Separator Margin="5"/>
 
+        <!--Beispiel-Einbindung des UserControls aus M11_UserControls-->
         <usercontrols:ColorPicker x:Name="ColorPicker" Tap="ColorPicker_Tap">
             <!--<Button Content="Hallo" usercontrols:ColorPicker.Count="5"/>-->
         </usercontrols:ColorPicker>
