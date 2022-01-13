@@ -12,7 +12,7 @@ namespace Personendatenbank
 
     public class Person : INotifyPropertyChanged, IDataErrorInfo
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         private string vorname;
         public string Vorname { get => vorname; set { PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Vorname))); vorname = value; } }
@@ -67,8 +67,8 @@ namespace Personendatenbank
 
         public Person()
         {
-            this.Vorname = String.Empty;
-            this.Nachname = String.Empty;
+            this.vorname = String.Empty;
+            this.nachname = String.Empty;
             this.Geburtsdatum = DateTime.Now;
         }
     }

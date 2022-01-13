@@ -43,6 +43,7 @@
                 </Popup>
             </StackPanel>
         </ControlTemplate>
+        
     </Window.Resources>
 
     <Window.DataContext>
@@ -74,7 +75,8 @@
         <TextBlock Text="Lieblingsfarbe:" 
                    Grid.Row="4"/>
         <TextBlock Text="Geschlecht:" 
-                   Grid.Row="5"/>
+                   Grid.Row="5"
+                   VerticalAlignment="Top"/>
 
         <TextBox x:Name="Tbx_Vorname"
                  Grid.Column="1"
