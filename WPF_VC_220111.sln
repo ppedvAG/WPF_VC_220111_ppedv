@@ -13,15 +13,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M03_Container", "Container\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M04_EventHandling", "EventHandling\M04_EventHandling.csproj", "{E4805FD1-8B1B-4270-BA7F-4E31CA160E1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M05_PropertyBinding", "PropertyBinding\M05_PropertyBinding.csproj", "{A31C232C-7CF5-40E9-9829-F089802D4C60}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M05_PropertyBinding", "PropertyBinding\M05_PropertyBinding.csproj", "{A31C232C-7CF5-40E9-9829-F089802D4C60}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorPicker", "ColorPicker\ColorPicker.csproj", "{575D0D69-C07D-49B1-9AB3-3C1F2F693C06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ColorPicker", "ColorPicker\ColorPicker.csproj", "{575D0D69-C07D-49B1-9AB3-3C1F2F693C06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M06_DataBinding", "DataBinding\M06_DataBinding.csproj", "{BB4A494C-202B-4279-AFA6-BD7F94FED0B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M06_DataBinding", "DataBinding\M06_DataBinding.csproj", "{BB4A494C-202B-4279-AFA6-BD7F94FED0B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M07_Ressourcen_Styles", "Ressourcen_Styles\M07_Ressourcen_Styles.csproj", "{01F1BBA0-BBBE-4029-B912-03C1323C7467}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M07_Ressourcen_Styles", "Ressourcen_Styles\M07_Ressourcen_Styles.csproj", "{01F1BBA0-BBBE-4029-B912-03C1323C7467}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M08_Templates", "Templates\M08_Templates.csproj", "{E842679D-1EAC-4E8E-AFF4-DDEA481D60FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "M08_Templates", "Templates\M08_Templates.csproj", "{E842679D-1EAC-4E8E-AFF4-DDEA481D60FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validation", "Validation\Validation.csproj", "{5BA2F01F-B5F1-4074-9218-C68E2D522D40}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{E842679D-1EAC-4E8E-AFF4-DDEA481D60FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E842679D-1EAC-4E8E-AFF4-DDEA481D60FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E842679D-1EAC-4E8E-AFF4-DDEA481D60FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BA2F01F-B5F1-4074-9218-C68E2D522D40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BA2F01F-B5F1-4074-9218-C68E2D522D40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BA2F01F-B5F1-4074-9218-C68E2D522D40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BA2F01F-B5F1-4074-9218-C68E2D522D40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

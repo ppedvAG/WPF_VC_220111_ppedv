@@ -6,7 +6,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Templates"
         mc:Ignorable="d"
-        Title="MainWindow" Height="367.015" Width="347">
+        Title="MainWindow" Height="367.015" Width="347"
+        Topmost="True">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Template">
@@ -50,6 +51,38 @@
                 x:Name="Btn_ControlTemplate" Click="Btn_ControlTemplate_Click"
                 Background="Aqua"/>
 
+
+        <!--DataTemplate-Bsp-->
+        <ListBox x:Name="Lbx_Personen" Height="100" ItemsSource="{Binding Personenliste}"
+                 SelectedValuePath="Vorname">
+            <ListBox.ItemTemplate>
+                <!--DataTemplates sind Vorlagen für das Layout von Items in ItemControls (z.B. ListView). Die Bindungen erfolgt an die
+                    ItemSource des Zielelements per Kurzbindungen.-->
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Vorname}"/>
+                        <TextBlock Text=" "/>
+                        <TextBlock Text="{Binding Nachname}"/>
+                        <TextBlock Text="{Binding Alter, StringFormat= ({0})}"/>
+                        <!--Property 'Tag' kann für jedes beliebige Objekt benutzt werden, z.B. für Zusatzinformation, Metadaten, Referenzen -->
+                        <!--Kurzbindung 'Binding' ohne Propertyangabe bindet immer an das ganze Objekt (hier: die ganze Person)-->
+                        <Button x:Name="Btn_Loeschen_02" Margin="2"
+                                Content="Löschen" Click="Btn_Loeschen_02_Click" Tag="{Binding}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button x:Name="Btn_Neu" Content="Neue Person" Click="Btn_Neu_Click"/>
+        <Button x:Name="Btn_Loeschen_01" Content="Lösche Person" Click="Btn_Loeschen_01_Click"/>
+        <Separator/>
+
+        <!--SelectedIndex gibt die Indexposition des markierten Elements zurück-->
+        <TextBlock Text="{Binding SelectedIndex, ElementName=Lbx_Personen, StringFormat=SelectedIndex: {0:00.00}}"/>
+        <!--SelectedItem gib das Objekt hinter dem markierten Element zurück-->
+        <TextBlock Text="{Binding ElementName=Lbx_Personen, Path=SelectedItem, StringFormat=SelectedItem: {0}}"/>
+        <!--SelectedValue gibt die in der Property SelectedValuePath im ItemControl angegebene Property zurück-->
+        <TextBlock Text="{Binding ElementName=Lbx_Personen, Path=SelectedValue, StringFormat=SelectedValue: {0}}"/>
+
+
     </StackPanel>
-    
 </Window>
