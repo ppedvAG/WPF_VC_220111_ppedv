@@ -71,6 +71,7 @@
                 <DataGridCheckBoxColumn Header="Verheiratet" Binding="{Binding Verheiratet}" Width="Auto"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Button Content="Button" Width="Auto"/>
     </DockPanel>
 
 </Window>
